@@ -1,2 +1,1 @@
-add_lunch_combo omni_catfish-eng
-add_lunch_combo omni_catfish-userdebug
+add_lunch_combo omni_skipjack-eng
