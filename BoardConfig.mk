@@ -37,16 +37,17 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a7
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=skipjack msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
-BOARD_KERNEL_BASE        := 0x80000000
-BOARD_KERNEL_PAGESIZE    := 4096
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-BOARD_RAMDISK_OFFSET     := 0x01000000
+BOARD_KERNEL_CMDLINE := androidboot.hardware=skipjack msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 console=null androidboot.console=null earlycon=msm_hsl_uart,0x78b0000
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_BASE        := 0x00008000
+BOARD_KERNEL_PAGESIZE    := 2048
+BOARD_KERNEL_TAGS_OFFSET := 0x01e00000
+BOARD_RAMDISK_OFFSET     := 0x02000000
 TARGET_PREBUILT_KERNEL := device/mobvoi/skipjack/zImage-dtb
 
 # Partitions
 BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 20971520
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_COPY_OUT_VENDOR := vendor
@@ -65,3 +66,5 @@ TW_INCLUDE_NTFS_3G := true
 TW_IGNORE_MISC_WIPE_DATA := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
+TW_USE_TOOLBOX := true
+PLATFORM_SECURITY_PATCH := 2099-12-31
