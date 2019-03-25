@@ -9,7 +9,7 @@
 /misc           emmc    /dev/block/platform/soc/7824900.sdhci/by-name/misc      flags=display="Misc";backup=1
 /vendor         ext4    /dev/block/platform/soc/7824900.sdhci/by-name/vendor    flags=display="Vendor";backup=1
 /vendor_image   emmc    /dev/block/platform/soc/7824900.sdhci/by-name/vendor    flags=display="Vendor Image";backup=1
-
+/oem            emmc    /dev/block/platform/soc/7824900.sdhci/by-name/oem       flags=display="oem";backup=1
 /aboot          emmc    /dev/block/platform/soc/7824900.sdhci/by-name/aboot     flags=display="Fastboot";backup=1
 /cmnlib         emmc    /dev/block/platform/soc/7824900.sdhci/by-name/cmnlib    flags=display="cmnlib";backup=1
 /keymaster      emmc    /dev/block/platform/soc/7824900.sdhci/by-name/keymaster flags=display="keymaster";backup=1
