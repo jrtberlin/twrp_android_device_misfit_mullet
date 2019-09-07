@@ -37,12 +37,12 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a7
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=skipjack msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 console=null androidboot.console=null earlycon=msm_hsl_uart,0x78b0000
+BOARD_KERNEL_CMDLINE := androidboot.hardware=skipjack msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_BASE        := 0x00008000
+BOARD_KERNEL_BASE        := 0x80008000
 BOARD_KERNEL_PAGESIZE    := 2048
-BOARD_KERNEL_TAGS_OFFSET := 0x01e00000
-BOARD_RAMDISK_OFFSET     := 0x02000000
+BOARD_KERNEL_TAGS_OFFSET := 0x81e00000
+BOARD_RAMDISK_OFFSET     := 0x82000000
 TARGET_PREBUILT_KERNEL := device/mobvoi/skipjack/zImage-dtb
 
 # Partitions
