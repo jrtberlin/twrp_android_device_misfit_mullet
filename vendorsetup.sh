@@ -1,1 +1,1 @@
-add_lunch_combo omni_skipjack-eng
+add_lunch_combo omni_tunny-eng

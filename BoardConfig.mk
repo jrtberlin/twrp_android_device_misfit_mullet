@@ -41,13 +41,14 @@ PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=skipjack msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=tunny msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_BASE        := 0x80008000
+BOARD_KERNEL_BASE        := 0x80000000
 BOARD_KERNEL_PAGESIZE    := 2048
-BOARD_KERNEL_TAGS_OFFSET := 0x81e00000
-BOARD_RAMDISK_OFFSET     := 0x82000000
-TARGET_PREBUILT_KERNEL := device/mobvoi/skipjack/zImage-dtb
+BOARD_KERNEL_OFFSET      := 0x00008000
+BOARD_KERNEL_TAGS_OFFSET := 0x01e00000
+BOARD_RAMDISK_OFFSET     := 0x02000000
+TARGET_PREBUILT_KERNEL := device/mobvoi/tunny/zImage-dtb
 
 # Partitions
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -66,11 +67,12 @@ TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_NTFS_3G := true
 TW_IGNORE_MISC_WIPE_DATA := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_USE_TOOLBOX := true
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
 TW_HAS_EDL_MODE := true
+
+# Debugging
+#TWRP_INCLUDE_LOGCAT := true
+#TARGET_USES_LOGD := true
