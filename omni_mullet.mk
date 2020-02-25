@@ -7,6 +7,6 @@ $(call inherit-product, vendor/omni/config/common.mk)
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mullet
 PRODUCT_NAME := omni_mullet
-PRODUCT_BRAND := misfit
-PRODUCT_MODEL := Vapor
-PRODUCT_MANUFACTURER := Misfit
+PRODUCT_BRAND := fossil
+PRODUCT_MODEL := Misfit Vapor
+PRODUCT_MANUFACTURER := Borqs

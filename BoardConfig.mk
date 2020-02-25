@@ -43,6 +43,7 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=mullet msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += earlyprintk buildvariant=eng androidboot.console=ttyHSL0
 BOARD_KERNEL_BASE        := 0x80000000
 BOARD_KERNEL_PAGESIZE    := 2048
 BOARD_KERNEL_OFFSET      := 0x00008000
@@ -74,5 +75,5 @@ TW_USE_TOOLBOX := true
 TW_HAS_EDL_MODE := true
 
 # Debugging
-#TWRP_INCLUDE_LOGCAT := true
-#TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
