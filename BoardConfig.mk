@@ -41,14 +41,14 @@ PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=tunny msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=mullet msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE        := 0x80000000
 BOARD_KERNEL_PAGESIZE    := 2048
 BOARD_KERNEL_OFFSET      := 0x00008000
 BOARD_KERNEL_TAGS_OFFSET := 0x01e00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
-TARGET_PREBUILT_KERNEL := device/mobvoi/tunny/zImage-dtb
+TARGET_PREBUILT_KERNEL := device/misfit/mullet/zImage-dtb
 
 # Partitions
 BOARD_HAS_LARGE_FILESYSTEM := true

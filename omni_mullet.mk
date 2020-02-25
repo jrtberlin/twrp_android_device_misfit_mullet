@@ -5,8 +5,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := tunny
-PRODUCT_NAME := omni_tunny
-PRODUCT_BRAND := mobvoi
-PRODUCT_MODEL := TicWatch E2
-PRODUCT_MANUFACTURER := Mobvoi
+PRODUCT_DEVICE := mullet
+PRODUCT_NAME := omni_mullet
+PRODUCT_BRAND := misfit
+PRODUCT_MODEL := Vapor
+PRODUCT_MANUFACTURER := Misfit
